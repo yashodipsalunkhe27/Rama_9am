@@ -1,0 +1,180 @@
+
+# 🎬 Netflix Movies & TV Shows Data Analysis (EDA Project)
+
+### 👨‍💻 Project by: **Vaibhav Gopal Chaudhari**  
+📧 Email: [chaudharivaibhav471@gmail.com](mailto:chaudharivaibhav471@gmail.com)
+
+---
+
+## 📘 Overview
+This project performs **Exploratory Data Analysis (EDA)** on the **Netflix Movies and TV Shows dataset** to uncover insights about Netflix’s content library, trends over time, and performance metrics like popularity and revenue.
+
+The analysis helps understand:
+- What kind of content dominates Netflix (Movies vs. TV Shows)
+- Which countries produce the most content  
+- Trends in ratings, popularity, and financial performance  
+- Correlations between features like budget, revenue, and popularity  
+
+---
+
+## 📂 Dataset Description
+
+The dataset includes:
+- **Type:** Movie or TV Show  
+- **Title, Director, Cast, Country**  
+- **Release Year, Date Added**  
+- **Genre, Duration, Rating**  
+- **Numerical Columns:** Budget, Revenue, Popularity, Vote Average, Vote Count  
+
+Each feature provides valuable information to explore Netflix’s content strategy and growth.
+
+---
+
+## 🧭 Steps Performed in the Project
+
+### 1️⃣ Data Loading and Understanding
+- Imported key libraries (`pandas`, `numpy`, `matplotlib`, `seaborn`).
+- Loaded the dataset into a DataFrame.
+- Explored its structure using `head()`, `info()`, and `describe()`.
+- Checked total records, column types, and missing data.
+
+**Understanding:**  
+The dataset had both categorical (type, genre, country) and numerical (budget, revenue, popularity) columns — ideal for mixed-type EDA.
+
+---
+
+### 2️⃣ Data Cleaning and Preprocessing
+- **Handled missing values**:
+  - Numerical columns filled with **median** or **KNN imputer**.
+  - Categorical columns filled with **mode**.
+- **Removed irrelevant columns** (like IDs, extra metadata).
+- **Fixed inconsistent country names** (e.g., “United States” → “USA”).
+- **Converted datatypes** for columns such as `release_year` and `date_added`.
+
+**Result:**  
+A clean, well-structured dataset ready for exploration.
+
+---
+
+### 3️⃣ Encoding and Feature Scaling
+- Applied **Label Encoding** for categorical columns like `type`, `rating`, and `country`.
+- Applied **StandardScaler** / **MinMaxScaler** to normalize numeric data for visual clarity.
+
+**Conclusion:**  
+This helped ensure numerical comparability between different features (budget, revenue, popularity).
+
+---
+
+### 4️⃣ Missing Value Analysis
+- Used a heatmap to visualize missing values.
+- Observed that only a few columns (like `director` and `cast`) had missing values.
+
+**Observation:**  
+The dataset was mostly complete — no need for heavy data imputation.
+
+---
+
+### 5️⃣ Outlier Detection and Treatment
+- Used the **IQR (Interquartile Range)** method to detect extreme values.
+- Capped extreme outliers or applied log transformation to reduce skew.
+
+**Example:**  
+Columns like `revenue`, `budget`, and `popularity` had high outliers due to blockbuster movies.
+
+**Conclusion:**  
+After treatment, distributions became smoother, improving accuracy of visual insights.
+
+---
+
+### 6️⃣ Univariate Analysis
+Explored one variable at a time to understand its distribution.
+
+#### 🔸 Type Distribution  
+Most entries were **Movies**, but TV Shows were increasing in number.
+
+#### 🔸 Release Year Trend  
+A huge rise in content was observed **after 2015**, reflecting Netflix’s global expansion.
+
+#### 🔸 Country-wise Distribution  
+**USA** leads content production, followed by **India**, **UK**, and **Canada**.
+
+#### 🔸 Rating Distribution  
+Most content has ratings between **6 and 8**, showing steady audience satisfaction.
+
+**Conclusion:**  
+Netflix’s library growth aligns with its international strategy and consistent audience quality.
+
+---
+
+### 7️⃣ Bivariate Analysis
+Compared two variables to find relationships.
+
+#### 🔹 Budget vs Revenue  
+A clear **positive correlation** — higher budgets often lead to higher revenues.
+
+#### 🔹 Popularity vs Revenue  
+Popular shows and movies generate greater revenue and engagement.
+
+#### 🔹 Type vs Vote Average  
+TV Shows maintain a slightly higher average rating than movies.
+
+**Conclusion:**  
+Financial investment and popularity strongly influence Netflix success metrics.
+
+---
+
+### 8️⃣ Multivariate Analysis
+Studied three or more variables together.
+
+#### 🔸 Bubble Chart (Budget, Revenue, Popularity)
+Showed that titles with **high budgets and high popularity** consistently perform best financially.
+
+#### 🔸 Correlation Heatmap
+Revealed strong positive correlations among:
+- `budget`
+- `revenue`
+- `popularity`
+- `vote_count`
+
+**Conclusion:**  
+These variables are key indicators of performance success.
+
+---
+
+## 🧠 Final Conclusion
+
+Key takeaways from this Netflix EDA project:
+
+1. **Movies dominate**, but **TV Shows** have rapidly increased since 2015.  
+2. **USA** leads content creation, followed by **India** and **UK**.  
+3. Most content has **moderate ratings (6–8)**, showing steady viewer satisfaction.  
+4. **Higher budgets** generally result in **higher revenues and popularity**.  
+5. Netflix’s expansion correlates with its **investment in high-quality originals**.  
+6. Strong correlations exist between **budget, popularity, and success metrics**.
+
+Overall, Netflix’s data reflects a strategy focused on **global expansion, quality consistency, and investment in popular genres**.
+
+---
+
+## ⚙️ Technologies Used
+- **Python 🐍**
+- **Pandas**, **NumPy**
+- **Matplotlib**, **Seaborn**
+- **Scikit-learn** (for scaling and encoding)
+- **Jupyter Notebook**
+
+---
+
+## ✍️ Author
+**👤 Vaibhav Gopal Chaudhari**  
+📧 [chaudharivaibhav471@gmail.com](mailto:chaudharivaibhav471@gmail.com)
+
+---
+## 🎯 Final Conclusion
+This project provides valuable insights into Netflix’s global content strategy.  
+It reveals how the platform’s focus shifted toward TV shows, how budget and revenue correlate, and how audience popularity varies by region and content type.
+
+These findings can support:
+- Building **recommendation systems**
+- Forecasting **content popularity**
+- Guiding **business and production strategies**
